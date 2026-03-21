@@ -82,7 +82,7 @@ Risk Assessment
 
 **The most significant risk identified**:
 
-RSK-005 – Ability to checkout with empty cart
+**RSK-005 - Ability to checkout with empty cart**
 
 This issue directly impacts transactional integrity and may lead to incorrect order processing.
 Mitigation requires proper backend validation and business rule enforcement.
@@ -100,24 +100,25 @@ Access control validation (unauthorized access)
 
 Known Issues (Automation Findings)
 
-TC-CART-NEG-005 – Checkout with empty cart
+**TC-CART-NEG-005 - Checkout with empty cart**
 
 This test fails intentionally as it exposes a critical defect.
 
 **Current behavior**: User is able to proceed to checkout with an empty cart
 **Expected behavior**: Checkout should be blocked when cart is empty
 
-Status: Documented as BUG-004
+**Status**: Documented as BUG-004
 This test will pass once the defect is fixed.
 
-Traceability
+*Traceability*
 
 All test cases were mapped to identified risks from the Risk Register.
 
 **Examples**:
 
-TC-CART-NEG-005 → RSK-005 (Checkout with empty cart)
-TC-AUTH-002 → RSK-002 (Session handling and access control)
+**TC-CART-NEG-005 → RSK-005 (Checkout with empty cart)**
+
+**TC-AUTH-002 → RSK-002 (Session handling and access control)**
 
 This ensures alignment between risk analysis, test design, and defect detection.
 
