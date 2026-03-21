@@ -1,18 +1,26 @@
+## 🧭 Executive Summary
+
+The application shows stable behavior in core user flows such as authentication and cart operations.
+
+However, critical defects in checkout validation and input handling significantly impact business logic and data integrity.
+
+Immediate attention is required for high-risk areas before production release.
+
 **Test Summary Report**
 
-Project: SauceDemo Functional Quality Audit
-Tester: Tatyana Syrovatko
-Test Type: Functional / Risk-Based Testing
-Test Cycle: Sprint 1
+**Project**: SauceDemo Functional Quality Audit
+**Tester**: Tatyana Syrovatko
+**Test Type**: Functional / Risk-Based Testing
+**Test Cycle**: Sprint 1
 
 **Test Scope**
 
 The objective of this test cycle was to validate core business-critical flows:
 
-User authentication
-Cart behavior and state management
-Checkout validation logic
-Order confirmation process
+- User authentication
+- Cart behavior and state management
+- Checkout validation logic
+- Order confirmation process
 
 Testing was executed using a risk-based approach derived from the identified Risk Register, with a focus on high-impact business scenarios.
 
@@ -32,7 +40,7 @@ Test Coverage Overview
 **Coverage includes**:
 
 - Positive scenarios
--- Negative validation scenarios
+- Negative validation scenarios
 - Boundary validation
 - Business logic validation
 - Security and access control validation
@@ -79,7 +87,7 @@ RSK-005 – Ability to checkout with empty cart
 This issue directly impacts transactional integrity and may lead to incorrect order processing.
 Mitigation requires proper backend validation and business rule enforcement.
 
-Automation Coverage
+**Automation Coverage**
 
 Automated tests were implemented using Playwright for selected high-risk scenarios:
 
@@ -87,7 +95,8 @@ Cart functionality (add/remove items)
 Cart state persistence after page refresh
 Access control validation (unauthorized access)
 
-Automation ensures regression coverage for critical flows and supports early detection of functional defects.
+- Automation was implemented using Playwright for high-risk scenarios.
+- Automation supports regression testing and ensures repeatable validation of critical business flows.
 
 Known Issues (Automation Findings)
 
@@ -95,8 +104,8 @@ TC-CART-NEG-005 – Checkout with empty cart
 
 This test fails intentionally as it exposes a critical defect.
 
-Current behavior: User is able to proceed to checkout with an empty cart
-Expected behavior: Checkout should be blocked when cart is empty
+**Current behavior**: User is able to proceed to checkout with an empty cart
+**Expected behavior**: Checkout should be blocked when cart is empty
 
 Status: Documented as BUG-004
 This test will pass once the defect is fixed.
