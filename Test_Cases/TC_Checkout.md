@@ -1,4 +1,5 @@
-**Test Cases - Checkout**
+Test Cases - Checkout
+--
 
 **Positive scenarios**
 
