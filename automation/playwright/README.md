@@ -1,8 +1,16 @@
-# Playwright Automation Layer
+# QA Automation Project - Playwright
 
-This directory contains automated UI tests implemented using Playwright.
+End-to-end QA automation project covering critical user flows of the SauceDemo e-commerce application.
 
-**Scope**
+This project demonstrates a structured QA approach including:
+- Risk-based test design
+- Negative testing strategy
+- Bug identification and documentation
+- Automated UI testing using Playwright
+
+---
+
+## Scope
 
 The automation suite covers critical business flows:
 
@@ -11,7 +19,9 @@ The automation suite covers critical business flows:
 - Checkout validation
 - Prevention of order placement with empty cart
 
-**Test Strategy**
+---
+
+## Test Strategy
 
 Automation focuses on:
 
@@ -19,36 +29,27 @@ Automation focuses on:
 - Business-critical flows
 - Regression-prone validation logic
 
-**Structure**
+Test design techniques applied:
+- Boundary Value Analysis
+- Negative testing
+- Input validation testing
 
-- tests/ – test specifications
-- pages/ – Page Object Model classes
-- playwright.config.ts – configuration
+---
+## Covered Modules
 
-**Covered modules**
+- login.spec.ts – authentication validation  
+- logout.spec.ts – logout flow validation  
+- cart.spec.ts – cart functionality  
+- cart-negative.spec.ts – negative cart scenarios  
+- checkout.spec.ts – positive and negative checkout scenarios  
 
-- login.spec.ts – authentication validation
-- logout.spec.ts – logout flow validation
-- cart.spec.ts – cart functionality
-- cart-negative.spec.ts – negative cart scenarios
-- checkout.spec.ts – positive and negative checkout scenarios
+---
 
-**How to run**
+## How to run
+
+Install dependencies and execute tests:
 
 ```bash
 cd automation/playwright
 npm install
 npx playwright test
-
-**Tech stack**
-
- - Playwright
- - TypeScript
- - Node.js
-
-*Known issues identified during automation*
-
-Some negative automated scenarios reflect real defects documented in the Bug_Reports folder, including:
- - checkout with empty cart
- - whitespace-only values accepted as valid input
- - special characters accepted without validation
