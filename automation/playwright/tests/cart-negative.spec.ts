@@ -45,6 +45,8 @@ test.describe('TC-CART-NEG-001 - Cart functionality - Negative scenarios', () =>
     });
 
     test('TC-CART-NEG-005 - User cannot proceed to checkout from empty cart', async ({ page }) => {
+        test.fail(true, 'BUG-001: Checkout allows proceeding with empty cart');
+        // BUG reference: https://tatyana-qa.atlassian.net/browse/SCRUM-21;
 
         await page.goto('https://www.saucedemo.com/');
         await page.locator('[data-test="username"]').fill('standard_user');
@@ -56,6 +58,7 @@ test.describe('TC-CART-NEG-001 - Cart functionality - Negative scenarios', () =>
         await page.locator('[data-test="shopping-cart-link"]').click();
         const buttonForPayOrder = page.locator('["data-test="checkout"]');
         await expect(buttonForPayOrder).toBeDisabled();
+
         // Known issue: Checkout is enabled with empty cart
         // Expected behavior: Checkout should be disabled or inaccessible when cart is empty
         // Related bug: BUG-001 (see Bug_Reports folder)

@@ -416,6 +416,8 @@ test.describe('Checkout functionality', () => {
         });
 
         test('TC-CHECKOUT-NEG-004 - User should not be able to submit whitespace-only values', async ({ page }) => {
+            test.fail(true, 'BUG-002: Validation includes only whitespace-only is broken');
+            // BUG reference: https://tatyana-qa.atlassian.net/browse/SCRUM-24
 
             const buttonAddToCart = page.locator('[data-test="add-to-cart-sauce-labs-fleece-jacket"]');
             await buttonAddToCart.click();
@@ -463,6 +465,8 @@ test.describe('Checkout functionality', () => {
         });
 
         test('TC-CHECKOUT-NEG-005 - User should not be able to submit special characters only', async ({ page }) => {
+            test.fail(true, 'BUG-003: Special characters validation is broken');
+            // BUG reference: https://tatyana-qa.atlassian.net/browse/SCRUM-26
 
             const buttonAddToCart = page.locator('[data-test="add-to-cart-sauce-labs-fleece-jacket"]');
             await buttonAddToCart.click();
