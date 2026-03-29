@@ -61,17 +61,15 @@ This project focuses on the most business-critical and regression-prone areas of
 
 ## Repository Structure
 
-```text
-Audit_Scope/             - audit objective and testing scope
-Bug_Reports/             - documented defects and bug evidence
-Data_Analysis/           - risk-related and supporting analysis
-Project_Management/      - task and workflow organization
-Test_Cases/              - manual test cases and coverage documents
-automation/playwright/   - Playwright automation suite
-docs/                    - supporting documentation
-evidence/                - screenshots and supporting files
+Audit_Scope/             - audit objective and testing scope  
+Bug_Reports/             - documented defects and bug evidence  
+Data_Analysis/           - risk-related and supporting analysis  
+Project_Management/      - task and workflow organization  
+Test_Cases/              - manual test cases and coverage documents  
+automation/playwright/   - Playwright automation suite  
+docs/                    - supporting documentation  
+evidence/                - screenshots and supporting files  
 Test_Summary_Report.md   - consolidated project summary
-
 
 ## Why This Project Matters
 
