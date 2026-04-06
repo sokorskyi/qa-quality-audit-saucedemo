@@ -1,4 +1,4 @@
-name: API Tests (Postman)
+name: Run API tests
 
 on:
   push:
@@ -10,11 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
       - name: Install Newman
         run: npm install -g newman
 
-      - name: Run API tests
-        run: newman run API/collection/api.tests.postman_collection.json -e API/environments/qa_environment.json --folder "Auth" --folder "Booking - CI"
+      - name: Run Booking - CI folder
+        run: |
+          newman run "API/collection/api.postman_collection.json" \
+            -e "API/environments/qa_environment.json" \
+            --folder "Booking - CI" \
+            --reporters cli
