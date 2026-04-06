@@ -16,43 +16,43 @@
 		},
 		{
 			"key": "firstname",
-			"value": "",
+			"value": "John",
 			"type": "default",
 			"enabled": true
 		},
 		{
 			"key": "lastname",
-			"value": "",
+			"value": "Smith",
 			"type": "default",
 			"enabled": true
 		},
 		{
 			"key": "totalprice",
-			"value": "",
+			"value": "150",
 			"type": "default",
 			"enabled": true
 		},
 		{
 			"key": "depositpaid",
-			"value": "",
+			"value": "true",
 			"type": "default",
 			"enabled": true
 		},
 		{
 			"key": "checkin",
-			"value": "",
+			"value": "2026-06-01",
 			"type": "default",
 			"enabled": true
 		},
 		{
 			"key": "checkout",
-			"value": "",
+			"value": "2026-06-05",
 			"type": "default",
 			"enabled": true
 		},
 		{
 			"key": "additionalneeds",
-			"value": "",
+			"value": "Breakfast",
 			"type": "default",
 			"enabled": true
 		}

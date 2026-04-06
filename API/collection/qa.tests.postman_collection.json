@@ -450,7 +450,7 @@
 									"});\r",
 									"\r",
 									"const jsonData = pm.response.json();\r",
-									"pm.collectionVariables.set(\"bookingId\", jsonData.bookingid);"
+									"pm.environment.set(\"bookingId\", jsonData.bookingid);"
 								],
 								"type": "text/javascript",
 								"packages": {},
@@ -460,7 +460,13 @@
 					],
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"firstname\": \"{{firstname}}\",\r\n  \"lastname\": \"{{lastname}}\",\r\n  \"totalprice\": {{totalprice}},\r\n  \"depositpaid\": {{depositpaid}},\r\n  \"bookingdates\": {\r\n    \"checkin\": \"{{checkin}}\",\r\n    \"checkout\": \"{{checkout}}\"\r\n  },\r\n  \"additionalneeds\": \"{{additionalneeds}}\"\r\n}",
